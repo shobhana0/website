@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    
+}
+body {
+    background-image: linear-gradient(to right top, #f5fffa, #eafbea, #e9f4d4, #f1eabf, #ffdead);
+}
+ @font-face {
+    font-family: "Dongle-light";
+    src: url("Dongle/Dongle-Light.ttf");
+}
+@font-face {
+    font-family: "Dongle-regular";
+    src: url("Dongle/Dongle-Regular.ttf");
+}
+@font-face {
+    font-family: "Dongle-bold";
+    src: url("Dongle/Dongle-Bold.ttf");
+}
+header{
+
+  background-color: #fff;
+  display: flex;
+  /* flex-wrap: wrap;*/
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: 25px;
+  font-style: bold;
+  cursor: pointer;
+}
+
+.logo img{
+    max-width: 15%;
+    background: white;
+    border-radius: 50%
+}
+.nav-menu ul{
+ display: flex;
+ padding-right: 0;
+}
+.nav-menu li{
+    list-style: none;
+    margin-right: 20px;
+}
+.nav-menu li:last-child{
+    margin-right: 0;
+}
+.nav-menu a{
+    text-decoration: underline;
+    font-family: "Dongle-bold";
+    font-size: 1.9rem;
+    color: #333;
+    transition: all ease 0.3s;
+    text-align: center;
+}
+.nav-menu a:hover{
+  color:  rgb(54, 190, 224);
+}
+
+.img{
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+.image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-family: "Dongle-bold";
+    font-size: 5rem;
+}
+.content p{
+    font-family: "Dongle-regular";
+    font-size: 2rem;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+.gallery{
+    font-size: 2.4rem;
+    font-family: "Dongle-bold";
+    margin: 40px 80px;
+    text-align: center;
+}
+.gallery h2{
+    margin-bottom: 40px;
+
+}
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+.gallery-item img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.gallery-item{
+    text-align: left;
+}
+.gallery-item h3{
+    font-size: 2rem;
+}
+.gallery-item p{
+    font-size: 1.4rem;
+    line-height: 1;
+    font-family: "Dongle-regular";
+}
+.video-container {
+    height: auto;
+    width: 100%;
+  }
+footer{
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: center;
+}
+
+footer p{
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+}
+
+@media (max-width: 1177px) {
+    .content h1{
+        line-height: 0.7;
+    }
+    .content p{
+        margin-top: 0;
+        line-height: 0.8;
+    }
+    .gallery img{
+        height: 250px;
+    }
+    input, textarea{
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .content h1{
+        margin-bottom: 10px;
+    }
+    .gallery-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+    }  
+
+}
+@media (max-width:603px){
+    content h1{
+        font-size: 2.5rem;
+    }
+    content p{
+        font-size: 1.5rem;
+    }
+    .logo {
+        display: none;
+    }
+}
+@media (max-width:430px){
+    header{
+        display: none;
+       
+    }
+    .content h1{
+        font-size: 1.8rem;
+    }
+    .content p{
+        font-size: 1.1rem;
+    }
+    .gallery{
+        font-size: 1.5rem;
+    }
+    .gallery-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
+    }
+}
+  
